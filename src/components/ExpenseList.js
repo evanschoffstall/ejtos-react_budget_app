@@ -8,7 +8,7 @@ const ExpenseList = () => {
   return (
     <table className="table">
       <thead className="thead-light">
-        <tr>
+        <tr style={{ backgroundColor: "#969696", color: "#fff" }}>
           <th scope="col">Department</th>
           <th scope="col">Allocated Budget</th>
           <th scope="col">Increase by 10</th>
