@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Budget = () => {
-  const { dispatch, budget, setBudget } = useContext(AppContext);
+  const { dispatch, budget } = useContext(AppContext);
   const [newBudget, setNewBudget] = useState(budget);
 
   useEffect(() => {
