@@ -5,11 +5,8 @@ const Budget = () => {
   const { dispatch, budget } = useContext(AppContext);
   const [newBudget, setNewBudget] = useState(budget);
 
-  useEffect(() => {
-    dispatch({ type: "SET_BUDGET", payload: newBudget });
-  }, [newBudget, dispatch]);
-
   const handleBudgetChange = (event) => {
+    dispatch({ type: "SET_BUDGET", payload: event.target.value });
     setNewBudget(event.target.value);
   };
 
