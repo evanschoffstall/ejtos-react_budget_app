@@ -5,7 +5,7 @@ import addImage from "../add.png";
 import removeImage from "../remove.png";
 
 const ExpenseItem = (props) => {
-  const { dispatch } = useContext(AppContext);
+  const { dispatch, currency } = useContext(AppContext);
 
   const handleDeleteExpense = () => {
     dispatch({
@@ -41,7 +41,10 @@ const ExpenseItem = (props) => {
   return (
     <tr>
       <td style={{ verticalAlign: "middle" }}>{props.name}</td>
-      <td style={{ verticalAlign: "middle" }}>£{props.cost}</td>
+      <td style={{ verticalAlign: "middle" }}>
+        {currency}
+        {props.cost}
+      </td>
       <td>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <img

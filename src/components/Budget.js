@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Budget = () => {
-  const { dispatch, budget } = useContext(AppContext);
+  const { dispatch, budget, currency } = useContext(AppContext);
   const [newBudget, setNewBudget] = useState(budget);
 
   const handleBudgetChange = (event) => {
@@ -16,7 +16,7 @@ const Budget = () => {
       style={{ border: "1px solid #2f3740" }}
     >
       <span>Budget: </span>
-      <span style={{ marginLeft: "5px" }}>£</span>
+      <span style={{ marginLeft: "5px" }}>{currency}</span>
       <input
         style={{}}
         type="number"
