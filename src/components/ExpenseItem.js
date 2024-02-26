@@ -48,6 +48,7 @@ const ExpenseItem = (props) => {
             style={{
               width: "30px",
               height: "30px",
+              marginTop: "3px",
               cursor: "pointer",
               opacity: 1,
             }}
@@ -65,6 +66,7 @@ const ExpenseItem = (props) => {
             style={{
               width: "30px",
               height: "30px",
+              marginTop: "3px",
               cursor: "pointer",
               opacity: 1,
             }}
@@ -78,7 +80,13 @@ const ExpenseItem = (props) => {
       </td>
       <td>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <TiDelete size="1.5em" onClick={handleDeleteExpense}></TiDelete>
+          <TiDelete
+            style={{ cursor: "pointer" }}
+            size="35px"
+            onClick={handleDeleteExpense}
+            onMouseOver={(e) => (e.currentTarget.style.opacity = 0.5)}
+            onMouseOut={(e) => (e.currentTarget.style.opacity = 1)}
+          ></TiDelete>
         </div>
       </td>
     </tr>
