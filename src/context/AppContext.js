@@ -3,7 +3,7 @@ import React, { createContext, useReducer } from "react";
 export const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_EXPENSE":
-      const totalExpense =
+      var totalExpense =
         state.expenses.reduce((total, exp) => total + exp.cost, 0) +
         action.payload.cost;
       if (totalExpense > state.budget) {
@@ -56,6 +56,31 @@ export const AppReducer = (state, action) => {
             0),
       };
     case "SET_BUDGET":
+      var totalExpense = state.expenses.reduce(
+        (total, exp) => total + exp.cost,
+        0
+      );
+      if (action.payload > 20000) {
+        alert(
+          `The budget exceeds the ${state.currency}20,000 limit by ${
+            state.currency
+          }${action.payload - 20000}`
+        );
+        return {
+          ...state,
+          budget: 20000, // set the budget to the maximum limit
+        };
+      } else if (action.payload < totalExpense) {
+        alert(
+          `Cannot set the budget! It's less than the total expenses by ${
+            totalExpense - action.payload
+          }`
+        );
+        return {
+          ...state,
+          budget: totalExpense, // set the budget to the total expense
+        };
+      }
       return {
         ...state,
         budget: action.payload,
