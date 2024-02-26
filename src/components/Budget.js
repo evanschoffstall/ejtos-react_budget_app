@@ -1,18 +1,14 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Budget = () => {
+  console.log("Budget rendered");
   const { dispatch, budget, currency } = useContext(AppContext);
-  const [newBudget, setNewBudget] = useState(budget);
-
-  useEffect(() => {
-    setNewBudget(budget);
-  }, [budget]);
 
   const handleBudgetChange = (event) => {
     dispatch({ type: "SET_BUDGET", payload: event.target.value });
-    setNewBudget(event.target.value);
   };
+
   return (
     <div className="alert alert-secondary">
       <span>Budget: </span>
@@ -21,7 +17,7 @@ const Budget = () => {
         style={{ flexGrow: 1, maxWidth: "100px" }}
         type="number"
         step="10"
-        value={newBudget}
+        value={budget}
         onChange={handleBudgetChange}
       ></input>
     </div>
