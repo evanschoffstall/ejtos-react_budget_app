@@ -7,33 +7,35 @@ const ExpenseList = () => {
   const { expenses } = useContext(AppContext);
 
   return (
-    <table className="table allocation">
-      <thead className="thead-light">
-        <tr style={{ backgroundColor: "#2F3740", color: "#fff" }}>
-          <th scope="col">Department</th>
-          <th scope="col">Allocated Budget</th>
-          <th scope="col" style={{ textAlign: "center" }}>
-            Increase by 10
-          </th>
-          <th scope="col" style={{ textAlign: "center" }}>
-            Decrease by 10
-          </th>
-          <th scope="col" style={{ textAlign: "center" }}>
-            Delete
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {expenses.map((expense) => (
-          <ExpenseItem
-            id={expense.id}
-            key={expense.id}
-            name={expense.name}
-            cost={expense.cost}
-          />
-        ))}
-      </tbody>
-    </table>
+    <div className="table-allocation-wrapper">
+      <table className="table allocation">
+        <thead className="thead-light">
+          <tr style={{ backgroundColor: "#2F3740", color: "#fff" }}>
+            <th scope="col">Department</th>
+            <th scope="col">Allocated Budget</th>
+            <th scope="col" style={{ textAlign: "center" }}>
+              Increase by 10
+            </th>
+            <th scope="col" style={{ textAlign: "center" }}>
+              Decrease by 10
+            </th>
+            <th scope="col" style={{ textAlign: "center" }}>
+              Delete
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {expenses.map((expense) => (
+            <ExpenseItem
+              id={expense.id}
+              key={expense.id}
+              name={expense.name}
+              cost={expense.cost}
+            />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

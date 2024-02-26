@@ -23,6 +23,9 @@ const App = () => {
           </div>
         </div>
         <div className="content">
+          <h3 className="mt-3" style={{ paddingBottom: "15px" }}>
+            Overview
+          </h3>
           <div className="row mt-3">
             <div className="col-sm" style={{ paddingBottom: "15px" }}>
               <Budget />

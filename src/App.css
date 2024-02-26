@@ -43,7 +43,18 @@ tr:nth-child(even) {
 
 .table.allocation tbody tr td,
 .table.allocation tbody tr th {
+  border: 0px solid #2f3740;
+}
+
+.table.allocation {
+  margin-bottom: 0px;
+}
+
+.table-allocation-wrapper {
   border: 1px solid #2f3740;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 25px;
 }
 
 .container,
