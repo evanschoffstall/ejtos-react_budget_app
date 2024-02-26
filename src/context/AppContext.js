@@ -61,29 +61,26 @@ export const AppReducer = (state, action) => {
         0
       );
       if (action.payload > 20000) {
-        alert(
-          `The budget exceeds the ${state.currency}20,000 limit by ${
-            state.currency
-          }${action.payload - 20000}`
-        );
         return {
           ...state,
           budget: 20000, // set the budget to the maximum limit
+          alert: `The budget exceeds the ${state.currency}20,000 limit by ${
+            state.currency
+          }${action.payload - 20000}`,
         };
       } else if (action.payload < totalExpense) {
-        alert(
-          `Cannot set the budget! It's less than the total expenses by ${
-            totalExpense - action.payload
-          }`
-        );
         return {
           ...state,
           budget: totalExpense, // set the budget to the total expense
+          alert: `Cannot set the budget! It's less than the total expenses by ${
+            totalExpense - action.payload
+          }`,
         };
       }
       return {
         ...state,
         budget: action.payload,
+        alert: null,
       };
     case "CHG_CURRENCY":
       return {
@@ -125,6 +122,7 @@ export const AppProvider = (props) => {
         remaining: remaining,
         dispatch,
         currency: state.currency,
+        alert: state.alert,
       }}
     >
       {props.children}
