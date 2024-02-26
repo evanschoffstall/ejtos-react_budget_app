@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import ExpenseItem from "./ExpenseItem";
 import { AppContext } from "../context/AppContext";
+import "../App.css";
 
 const ExpenseList = () => {
   const { expenses } = useContext(AppContext);
 
   return (
-    <table className="table">
+    <table className="table allocation">
       <thead className="thead-light">
         <tr style={{ backgroundColor: "#212529", color: "#fff" }}>
           <th scope="col">Department</th>
