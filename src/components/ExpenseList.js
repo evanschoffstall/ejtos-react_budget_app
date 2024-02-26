@@ -9,7 +9,7 @@ const ExpenseList = () => {
   return (
     <table className="table allocation">
       <thead className="thead-light">
-        <tr style={{ backgroundColor: "#212529", color: "#fff" }}>
+        <tr style={{ backgroundColor: "#2F3740", color: "#fff" }}>
           <th scope="col">Department</th>
           <th scope="col">Allocated Budget</th>
           <th scope="col" style={{ textAlign: "center" }}>

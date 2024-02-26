@@ -19,12 +19,12 @@ const App = () => {
         <div className="navbar">
           <div className="logo">
             <img src={logo} alt="logo" />
-            <h1 className="mt-3">Company's Budget Allocation</h1>
+            <h1 style={{ paddingTop: "13px" }}>Company's Budget Allocation</h1>
           </div>
         </div>
         <div className="content">
           <div className="row mt-3">
-            <div className="col-sm" style={{ paddingBottom: "10px" }}>
+            <div className="col-sm" style={{ paddingBottom: "15px" }}>
               <Budget />
             </div>
             <div className="col-sm">
@@ -36,14 +36,18 @@ const App = () => {
           </div>
         </div>
         <div className="divider"></div>
-        <h3 className="mt-3">Allocation</h3>
+        <h3 className="mt-3" style={{ paddingBottom: "0px" }}>
+          Allocation
+        </h3>
         <div className="row">
           <div className="col-sm">
             <ExpenseList />
           </div>
         </div>
-        <div className="divider"></div>
-        <h3 className="mt-3">Change allocation</h3>
+        <div className="divider" style={{ height: "0.5px" }}></div>
+        <h3 className="mt-3" style={{ marginBottom: "-10px" }}>
+          Change allocation
+        </h3>
         <div className="row mt-3">
           <div className="col-sm">
             <AllocationForm />

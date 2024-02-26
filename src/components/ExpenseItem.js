@@ -40,8 +40,8 @@ const ExpenseItem = (props) => {
 
   return (
     <tr>
-      <td>{props.name}</td>
-      <td>£{props.cost}</td>
+      <td style={{ verticalAlign: "middle" }}>{props.name}</td>
+      <td style={{ verticalAlign: "middle" }}>£{props.cost}</td>
       <td>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <img
@@ -82,7 +82,7 @@ const ExpenseItem = (props) => {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <TiDelete
             style={{ cursor: "pointer" }}
-            size="35px"
+            size="37px"
             onClick={handleDeleteExpense}
             onMouseOver={(e) => (e.currentTarget.style.opacity = 0.5)}
             onMouseOut={(e) => (e.currentTarget.style.opacity = 1)}

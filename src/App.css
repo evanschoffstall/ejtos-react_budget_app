@@ -3,6 +3,10 @@ body {
   color: #333;
 }
 
+.mt-3 {
+  color: #2f3740;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -11,7 +15,19 @@ form {
 input,
 textarea,
 select {
-  border: 1px solid #ccc;
+  color: #000;
+  background-color: #e2e3e5;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.custom-select {
+  border-radius: 5px !important;
+}
+.input-group-text {
+  border-radius: 5px !important;
+  color: #fff;
+  background-color: #2f3740;
 }
 
 button {
@@ -22,7 +38,7 @@ button {
 }
 
 tr:nth-child(even) {
-  background-color: lightgray;
+  background-color: #e2e3e5;
 }
 
 .table.allocation tbody tr td,
@@ -33,7 +49,6 @@ tr:nth-child(even) {
 .container,
 .navbar {
   position: fixed;
-  left: 20px;
   width: 100%;
   background-color: #fff;
   color: #000;
@@ -41,10 +56,14 @@ tr:nth-child(even) {
 }
 
 .navbar {
-  background-color: #212529;
+  background-color: #252c33;
   color: #fff;
   top: 0;
   left: 0;
+}
+
+.container {
+  position: relative;
 }
 
 .container .logo {
@@ -63,16 +82,17 @@ tr:nth-child(even) {
 }
 
 .container .content {
-  padding-top: 100px;
+  padding-top: 110px;
 }
 
 .container .divider {
   height: 1px;
-  background-color: #212529;
-  margin: 20px 0;
+  background-color: #2f3740;
+  margin: 10px 0;
+  margin-bottom: 30px;
 }
 
 .container .row {
-  margin-top: 20px;
-  margin-bottom: -15px;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
