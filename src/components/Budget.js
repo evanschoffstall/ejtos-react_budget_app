@@ -18,7 +18,7 @@ const Budget = () => {
       <span>Budget: </span>
       <span style={{ marginLeft: "5px" }}>£</span>
       <input
-        style={{ border: "1px solid transparent" }}
+        style={{}}
         type="number"
         step="10"
         value={newBudget}
