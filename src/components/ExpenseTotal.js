@@ -6,7 +6,10 @@ const ExpenseTotal = () => {
     return (total += item.cost);
   }, 0);
   return (
-    <div className="alert alert-primary">
+    <div
+      className="alert alert-primary"
+      style={{ border: "1px solid #2f3740" }}
+    >
       <span>Spent so far: £{totalExpenses}</span>
     </div>
   );

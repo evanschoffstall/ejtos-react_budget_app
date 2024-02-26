@@ -1,5 +1,3 @@
-// App.js
-
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -19,7 +17,9 @@ const App = () => {
         <div className="navbar">
           <div className="logo">
             <img src={logo} alt="logo" />
-            <h1 style={{ paddingTop: "13px" }}>Company's Budget Allocation</h1>
+            <h1 style={{ paddingTop: "13px", fontSize: "30px" }}>
+              Company's Budget Allocation
+            </h1>
           </div>
         </div>
         <div className="content">
@@ -35,7 +35,6 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="divider"></div>
         <h3 className="mt-3" style={{ paddingBottom: "0px" }}>
           Allocation
         </h3>
@@ -44,7 +43,6 @@ const App = () => {
             <ExpenseList />
           </div>
         </div>
-        <div className="divider" style={{ height: "0.5px" }}></div>
         <h3 className="mt-3" style={{ marginBottom: "-10px" }}>
           Change allocation
         </h3>

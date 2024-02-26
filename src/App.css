@@ -18,7 +18,7 @@ select {
   color: #000;
   background-color: #e2e3e5;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 1px solid #2f3740;
 }
 
 .custom-select {
@@ -43,7 +43,7 @@ tr:nth-child(even) {
 
 .table.allocation tbody tr td,
 .table.allocation tbody tr th {
-  border: none;
+  border: 1px solid #2f3740;
 }
 
 .container,
