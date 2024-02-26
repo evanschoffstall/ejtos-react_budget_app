@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
 
-// 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
   let budget = 0;
   switch (action.type) {
@@ -27,6 +26,22 @@ export const AppReducer = (state, action) => {
         return {
           ...state,
         };
+      }
+    case "DECREASE_EXPENSE":
+      let decreasedExpense = state.expenses.find(
+        (exp) => exp.name === action.payload.name
+      );
+      if (decreasedExpense && decreasedExpense.cost >= action.payload.cost) {
+        decreasedExpense.cost -= action.payload.cost;
+        return {
+          ...state,
+          expenses: state.expenses.map((exp) =>
+            exp.name === action.payload.name ? decreasedExpense : exp
+          ),
+        };
+      } else {
+        alert("Cannot decrease the allocation! Funds would become negative");
+        return state;
       }
     case "RED_EXPENSE":
       const red_expenses = state.expenses.map((currentExp) => {
