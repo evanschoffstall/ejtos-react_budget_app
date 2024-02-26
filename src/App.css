@@ -73,6 +73,13 @@ tr:nth-child(even) {
   left: 0;
 }
 
+.alert {
+  border: 1px solid #2f3740;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
 .container {
   position: relative;
 }

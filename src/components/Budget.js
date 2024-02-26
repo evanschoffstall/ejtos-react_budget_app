@@ -11,14 +11,11 @@ const Budget = () => {
   };
 
   return (
-    <div
-      className="alert alert-secondary"
-      style={{ border: "1px solid #2f3740" }}
-    >
+    <div className="alert alert-secondary">
       <span>Budget: </span>
       <span style={{ marginLeft: "5px" }}>{currency}</span>
       <input
-        style={{}}
+        style={{ flexGrow: 1, maxWidth: "100px" }}
         type="number"
         step="10"
         value={newBudget}

@@ -13,7 +13,7 @@ const Currency = () => {
   return (
     <div
       className="alert alert-secondary"
-      style={{ border: "1px solid #2f3740", backgroundColor: "#94E499" }}
+      style={{ backgroundColor: "#94E499" }}
     >
       <span>Currency: </span>
       <select
